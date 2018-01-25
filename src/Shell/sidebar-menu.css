@@ -1,0 +1,51 @@
+#sidebar-menu {
+    width: 64px;
+    border: 1px solid #f5f6f8;
+}
+
+#sidebar-menu .link a {
+    color: #8299f5;
+}
+
+#sidebar-menu .ant-menu {
+    background: #f5f6f8 !important;
+}
+
+.ant-layout-sider-collapsed .ant-menu-item {
+    width: 60px;
+}
+
+.ant-menu-inline-collapsed > .ant-menu-item .anticon {
+    font-size: 1.5rem !important;
+    line-height: 72px !important;
+}
+
+.ant-menu-vertical .ant-menu-item {
+    height: 72px !important;
+    line-height: 72px !important;
+}
+
+#sidebar-menu .ant-menu-item {
+    padding: 4px 0 0 18px !important;
+}
+
+#sidebar-menu .ant-menu-item {
+    color: #8292b2;
+}
+
+#sidebar-menu .ant-menu-item-selected {
+    color: #ffffff;
+    background-color: #3198fa;
+}
+
+#sidebar-menu .ant-menu-item-selected .link a {
+    color: #ffffff;
+}
+
+#sidebar-menu svg path {
+    fill: #8292b2;
+}
+
+#sidebar-menu .ant-menu-item-selected svg path {
+    fill: white;
+}
