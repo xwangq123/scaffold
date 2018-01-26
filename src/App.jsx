@@ -6,21 +6,13 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { combineReducers } from 'redux-immutable';
 import { createEpicMiddleware, combineEpics } from 'redux-observable';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
+import { LocaleProvider } from 'antd';
 
-import { LocaleProvider, Layout, Menu, Breadcrumb } from 'antd';
 import shell from './Shell';
-import dealerManagement from './DealerManagement/DealerManagement';
-import subDealerManagement from './SubDealerManagement/SubDealerManagement';
-const { Header, Content, Footer } = Layout;
-
+import delaerPost from './DealerPost';
 export default class App extends Component {
     constructor(props) {
         super(props);
-
-        const states = {
-            shell: shell.state,
-            dealerManagement: {}
-        };
 
         const reducers = combineReducers({});
         const epics = combineEpics();
@@ -34,6 +26,7 @@ export default class App extends Component {
             )
         );
     }
+
     render() {
         return (
             <Provider store={this.store}>
@@ -41,9 +34,8 @@ export default class App extends Component {
                     <Router>
                         <shell.Shell>
                             <Switch>
-                                <Route path="/dealer" component={dealerManagement} strict />
-                                <Route path="/subDealer" component={subDealerManagement} strict />
-                                <Redirect from="/" to="/" />
+                                <Route path="/delaerpost" component={delaerPost.DealerPost} />
+                                {/* <Redirect from="/" to="/" />*/}
                             </Switch>
                         </shell.Shell>
                     </Router>

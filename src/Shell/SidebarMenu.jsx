@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Menu, Icon } from 'antd';
 import { NavLink } from 'react-router-dom';
+
 const SubMenu = Menu.SubMenu;
 
 class SidebarMenu extends Component {
@@ -19,6 +20,7 @@ class SidebarMenu extends Component {
             });
         }
     };
+
     render() {
         return (
             <Menu
@@ -56,9 +58,9 @@ class SidebarMenu extends Component {
                         <Menu.Item key="/subDealer">
                             <NavLink to="/subDealer">二级站基本信息管理</NavLink>
                         </Menu.Item>
-                        <Menu.Item key="dealerAddress">地址维护(营销公司)</Menu.Item>
-                        <Menu.Item key="dealerPersonnel">人员管理</Menu.Item>
-                        <Menu.Item key="dealerKeyPosition">岗位管理</Menu.Item>
+                        <Menu.Item key="DealerPost">
+                            <NavLink to="/delaerpost">经销商岗位管理</NavLink>
+                        </Menu.Item>
                     </SubMenu>
                     <SubMenu key="MarketDiscipline" title="市场纪律管理">
                         <Menu.Item key="VehicleModelPrice">车型报备价格维护</Menu.Item>
